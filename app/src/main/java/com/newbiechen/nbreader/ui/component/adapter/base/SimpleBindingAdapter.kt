@@ -32,7 +32,7 @@ abstract class SimpleBindingAdapter<T> : RecyclerView.Adapter<WrapViewHolder<T>>
     }
 
     fun getItem(pos: Int): T? {
-        return if (pos < mItemList.size) mItemList[pos] else null
+        return mItemList.getOrNull(pos)
     }
 
     fun refreshItems(items: List<T>?) {
